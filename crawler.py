@@ -4,6 +4,11 @@ import json
 import datetime
 from dbconfig.config import use_mariadb, use_postgresql, use_mongodb, use_sqlite, use_redis
 
+"""
+TODO: Simplify db importings
+Instead of if statements, use different approach to simplify code
+"""
+
 if use_mariadb:
   from dbconfig.config import mdb_connection
 if use_postgresql:
@@ -15,6 +20,7 @@ if use_sqlite:
 if use_redis:
   from dbconfig.config import red
 
+#TODO: Restructure datas (Add normalized strings for example)
 
 # We need:
 # BeautifulSoup to get request_verification_token_header from a hidden input (view-source:https://adres.nvi.gov.tr/VatandasIslemleri/AdresSorgu, line 685)
